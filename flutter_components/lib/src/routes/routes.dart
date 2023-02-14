@@ -6,6 +6,7 @@ import '../pages/alert_page.dart';
 import '../pages/avatar_page.dart';
 import '../pages/card_page.dart';
 import '../pages/home_page.dart';
+import '../pages/input_page.dart';
 
 Map<String, WidgetBuilder> getApplicationRoutes() {
 
@@ -14,6 +15,7 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     'alert'  : ( BuildContext context ) => AlertPage(),
     AvatarPage.pageName : ( BuildContext context ) => AvatarPage(),
     'card'   : ( BuildContext context ) => CardPage(),
+    'inputs' : ( BuildContext context ) => InputPage(),
 
   };
 
