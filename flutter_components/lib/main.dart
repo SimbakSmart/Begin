@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_components/src/pages/alert_page.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_components/src/pages/avatar_page.dart';
 import 'package:flutter_components/src/pages/home_page.dart';
 import 'package:flutter_components/src/pages/home_temp.dart';
@@ -19,6 +20,14 @@ class MyApp extends StatelessWidget {
       title: 'Componentes APP',
       debugShowCheckedModeBanner: false,
      // home: HomePage(),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', 'US'), // English
+        const Locale('es', 'ES'),
+      ],
       initialRoute: '/',
       routes:getApplicationRoutes(),
       onGenerateRoute: (RouteSettings settings){ //Si una pagina no esta configura, muestra alert page pof defecto
