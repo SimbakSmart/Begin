@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_components/src/pages/alert_page.dart';
 import 'package:flutter_components/src/providers/menu_provider.dart';
 
 import '../utils/icono_string_util.dart';
@@ -42,9 +43,13 @@ class HomePage extends StatelessWidget {
         trailing: Icon ( Icons.keyboard_arrow_right, color: Colors.blue ),
         onTap: () {
 
+        final route = MaterialPageRoute(
+            builder:(context){
+          return AlertPage();
+        });
+         Navigator.push(context, route);
 
-
-        },
+        }
       );
 
       opciones..add( widgetTemp )
