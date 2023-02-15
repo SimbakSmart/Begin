@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:peliculas/src/providers/peliculas_provider.dart';
 
 class HomePage extends StatelessWidget {
 
@@ -20,6 +21,9 @@ class HomePage extends StatelessWidget {
 
 
   Widget _swiperTarjetas(){
+
+    final peliculasP = new PeliculasProvider();
+    peliculasP.getEnCines();
 
     return Container(
       padding: EdgeInsets.only(top:10.0),
